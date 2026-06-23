@@ -4677,13 +4677,195 @@ input, select, textarea {
 			opacity: 0.5;
 		}
 
-		body.is-navPanel-visible #navPanel {
+	body.is-navPanel-visible #navPanel {
 			-moz-transform: translateX(0);
 			-webkit-transform: translateX(0);
 			-ms-transform: translateX(0);
 			transform: translateX(0);
 			box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, 0.2);
 			visibility: visible;
+		}
+
+	}
+
+/* Portfolio refresh */
+
+	.profile-hero .major p {
+		max-width: 52rem;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.hero-tags,
+	.project-tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.55rem;
+		justify-content: center;
+		list-style: none;
+		margin: 0 0 2rem 0;
+		padding: 0;
+	}
+
+	.hero-tags li,
+	.project-tags li,
+	.credential-type {
+		border: solid 1px #eeeeee;
+		border-radius: 999px;
+		background: #f7f7f7;
+		color: #555555;
+		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		font-size: 0.72rem;
+		font-weight: 700;
+		letter-spacing: 0.075em;
+		line-height: 1;
+		padding: 0.65rem 0.85rem;
+		text-transform: uppercase;
+	}
+
+	.project-tags {
+		justify-content: flex-start;
+		margin-bottom: 1.5rem;
+	}
+
+	.stats-grid,
+	.skill-groups,
+	.education-grid {
+		display: grid;
+		gap: 1.5rem;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		margin: 0 0 2rem 0;
+	}
+
+	.stats-grid article,
+	.skill-groups article,
+	.education-grid article,
+	.timeline article,
+	.credential-placeholder,
+	.research-placeholder {
+		border: solid 1px #eeeeee;
+		border-radius: 0.35rem;
+		background: #ffffff;
+		padding: 1.5rem;
+	}
+
+	.stats-grid article {
+		text-align: center;
+	}
+
+	.stats-grid strong {
+		color: #212931;
+		display: block;
+		font-family: "Merriweather", Georgia, serif;
+		font-size: 2.5rem;
+		line-height: 1;
+		margin-bottom: 0.75rem;
+	}
+
+	.stats-grid span,
+	.credential-placeholder span,
+	.research-placeholder span {
+		color: #717981;
+		display: block;
+		font-size: 0.95rem;
+	}
+
+	.education-grid,
+	.skill-groups {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.timeline {
+		display: grid;
+		gap: 1.25rem;
+	}
+
+	.timeline-date {
+		color: #18bfef;
+		display: block;
+		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		font-size: 0.8rem;
+		font-weight: 900;
+		letter-spacing: 0.1em;
+		margin-bottom: 0.5rem;
+		text-transform: uppercase;
+	}
+
+	.achievements ul {
+		max-width: 48rem;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.cert-logo,
+	.paper-thumb {
+		background: #f7f7f7;
+		border-radius: 0.35rem;
+		height: 260px;
+		object-fit: contain;
+	}
+
+	.paper-thumb {
+		object-fit: cover;
+	}
+
+	.credential-type {
+		display: inline-block;
+		margin-bottom: 1rem;
+	}
+
+	.credential-placeholder,
+	.research-placeholder {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		height: 260px;
+		justify-content: center;
+		margin-bottom: 2rem;
+		text-align: center;
+	}
+
+	.credential-placeholder strong,
+	.research-placeholder strong {
+		color: #212931;
+		font-family: "Merriweather", Georgia, serif;
+		font-size: 1.35rem;
+		margin-bottom: 0.35rem;
+	}
+
+	.page-heading {
+		padding-bottom: 2rem !important;
+	}
+
+	@media screen and (max-width: 980px) {
+
+		.stats-grid,
+		.skill-groups,
+		.education-grid {
+			grid-template-columns: 1fr;
+		}
+
+	}
+
+	@media screen and (max-width: 736px) {
+
+		.hero-tags,
+		.project-tags {
+			gap: 0.4rem;
+		}
+
+		.hero-tags li,
+		.project-tags li,
+		.credential-type {
+			font-size: 0.65rem;
+			padding: 0.55rem 0.7rem;
+		}
+
+		.stats-grid article,
+		.skill-groups article,
+		.education-grid article,
+		.timeline article {
+			padding: 1.1rem;
 		}
 
 	}
