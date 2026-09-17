@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      Reading the patterns behind Airbnb listings. | Vishal Maheshwari
+    </title>
+    <meta
+      name="description"
+      content="An exploratory Python project focused on cleaning, understanding, and interpreting listing data."
+    />
+    <meta name="theme-color" content="#07090d" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Reading the patterns behind Airbnb listings. | Vishal Maheshwari"
+    />
+    <meta
+      property="og:description"
+      content="An exploratory Python project focused on cleaning, understanding, and interpreting listing data."
+    />
+    <meta property="og:image" content="assets/social-preview.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link
+      rel="preload"
+      href="assets/fonts/space-grotesk.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="assets/css/signal.css" />
+    <script src="assets/js/signal.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="shell nav-wrap">
+        <a class="brand" href="index.html" aria-label="Vishal Maheshwari — home"
+          ><span class="monogram">vm<span>.</span></span
+          ><span class="brand-caption mono"
+            >VISHAL MAHESHWARI<br />THE SIGNAL LAB</span
+          ></a
+        >
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          Menu +
+        </button>
+        <nav class="nav-links" id="main-nav" aria-label="Main navigation">
+          <a href="projects.html" aria-current="page"
+            ><span aria-hidden="true">[W]</span>Work</a
+          ><a href="index.html#about"
+            ><span aria-hidden="true">[A]</span>About</a
+          ><a href="research.html"
+            ><span aria-hidden="true">[R]</span>Research</a
+          ><a class="nav-contact" href="index.html#contact"
+            >Let’s talk <b aria-hidden="true">↗</b></a
+          >
+        </nav>
+      </div>
+      <div class="progress" aria-hidden="true"></div>
+    </header>
+    <main id="main" tabindex="-1">
+      <div class="shell">
+        <section class="page-hero">
+          <div class="breadcrumb">
+            <a href="index.html">Home</a><span>/</span
+            ><a href="projects.html">Work</a><span>/</span><span>Case 01</span>
+          </div>
+          <div class="case-header">
+            <div>
+              <div class="eyebrow">01 / Exploratory analytics</div>
+              <h1>Reading the patterns behind Airbnb listings.</h1>
+              <p>
+                An exploratory Python project focused on cleaning,
+                understanding, and interpreting listing data.
+              </p>
+            </div>
+            <div class="case-graphic">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 460 260"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path d="M40 45V215" stroke="#202530" />
+                <path d="M80 45V215" stroke="#202530" />
+                <path d="M120 45V215" stroke="#202530" />
+                <path d="M160 45V215" stroke="#202530" />
+                <path d="M200 45V215" stroke="#202530" />
+                <path d="M240 45V215" stroke="#202530" />
+                <path d="M280 45V215" stroke="#202530" />
+                <path d="M320 45V215" stroke="#202530" />
+                <path d="M360 45V215" stroke="#202530" />
+                <path d="M400 45V215" stroke="#202530" />
+                <path d="M440 45V215" stroke="#202530" />
+                <path d="M40 45H430" stroke="#202530" />
+                <path d="M40 79H430" stroke="#202530" />
+                <path d="M40 113H430" stroke="#202530" />
+                <path d="M40 147H430" stroke="#202530" />
+                <path d="M40 181H430" stroke="#202530" />
+                <path d="M40 215H430" stroke="#202530" />
+                <circle cx="55" cy="175.0" r="3" fill="#73e7ff" opacity=".7" />
+                <circle cx="64" cy="175.5" r="2" fill="#ff5edb" opacity=".7" />
+                <circle cx="73" cy="176.1" r="2" fill="#c7ff4a" opacity=".7" />
+                <circle cx="82" cy="176.9" r="3" fill="#73e7ff" opacity=".7" />
+                <circle cx="91" cy="145.8" r="2" fill="#ff5edb" opacity=".7" />
+                <circle cx="100" cy="147.1" r="2" fill="#c7ff4a" opacity=".7" />
+                <circle cx="109" cy="148.8" r="3" fill="#73e7ff" opacity=".7" />
+                <circle cx="118" cy="150.9" r="2" fill="#ff5edb" opacity=".7" />
+                <circle cx="127" cy="121.6" r="2" fill="#c7ff4a" opacity=".7" />
+                <circle cx="136" cy="124.7" r="3" fill="#73e7ff" opacity=".7" />
+                <circle cx="145" cy="128.5" r="2" fill="#ff5edb" opacity=".7" />
+                <circle cx="154" cy="133.0" r="2" fill="#c7ff4a" opacity=".7" />
+                <circle cx="163" cy="106.1" r="3" fill="#73e7ff" opacity=".7" />
+                <circle cx="172" cy="111.9" r="2" fill="#ff5edb" opacity=".7" />
+                <circle cx="181" cy="118.4" r="2" fill="#c7ff4a" opacity=".7" />
+                <circle cx="190" cy="125.7" r="3" fill="#73e7ff" opacity=".7" />
+                <circle cx="199" cy="101.7" r="2" fill="#ff5edb" opacity=".7" />
+                <circle cx="208" cy="110.4" r="2" fill="#c7ff4a" opacity=".7" />
+                <circle cx="217" cy="119.8" r="3" fill="#73e7ff" opacity=".7" />
+                <circle cx="226" cy="129.8" r="2" fill="#ff5edb" opacity=".7" />
+                <circle cx="235" cy="108.5" r="2" fill="#c7ff4a" opacity=".7" />
+                <circle cx="244" cy="119.8" r="3" fill="#73e7ff" opacity=".7" />
+                <circle cx="253" cy="131.6" r="2" fill="#ff5edb" opacity=".7" />
+                <circle cx="262" cy="143.8" r="2" fill="#c7ff4a" opacity=".7" />
+                <circle cx="271" cy="124.6" r="3" fill="#73e7ff" opacity=".7" />
+                <circle cx="280" cy="137.6" r="2" fill="#ff5edb" opacity=".7" />
+                <circle cx="289" cy="150.9" r="2" fill="#c7ff4a" opacity=".7" />
+                <circle cx="298" cy="164.5" r="3" fill="#73e7ff" opacity=".7" />
+                <circle cx="307" cy="146.1" r="2" fill="#ff5edb" opacity=".7" />
+                <circle cx="316" cy="159.8" r="2" fill="#c7ff4a" opacity=".7" />
+                <circle cx="325" cy="173.5" r="3" fill="#73e7ff" opacity=".7" />
+                <circle cx="334" cy="187.0" r="2" fill="#ff5edb" opacity=".7" />
+                <circle cx="343" cy="168.4" r="2" fill="#c7ff4a" opacity=".7" />
+                <circle cx="352" cy="181.5" r="3" fill="#73e7ff" opacity=".7" />
+                <circle cx="361" cy="194.2" r="2" fill="#ff5edb" opacity=".7" />
+                <circle cx="370" cy="206.5" r="2" fill="#c7ff4a" opacity=".7" />
+                <circle cx="379" cy="186.4" r="3" fill="#73e7ff" opacity=".7" />
+                <circle cx="388" cy="197.7" r="2" fill="#ff5edb" opacity=".7" />
+                <circle cx="397" cy="208.5" r="2" fill="#c7ff4a" opacity=".7" />
+                <circle cx="406" cy="218.6" r="3" fill="#73e7ff" opacity=".7" />
+                <path
+                  d="M40 190C110 185 115 105 190 118S290 156 330 88S400 95 430 45"
+                  stroke="#ff5edb"
+                  stroke-width="2"
+                />
+                <path d="M40 215H430M40 215V35" stroke="#4b505d" />
+                <text
+                  x="42"
+                  y="240"
+                  fill="#9298a2"
+                  font-size="9"
+                  font-family="monospace"
+                >
+                  EXPLORE / COMPARE / INTERPRET
+                </text>
+                <text
+                  x="292"
+                  y="28"
+                  fill="#9298a2"
+                  font-size="8"
+                  font-family="monospace"
+                >
+                  CONCEPTUAL VISUAL
+                </text>
+              </svg>
+            </div>
+          </div>
+        </section>
+        <dl class="case-facts">
+          <div>
+            <dt>Project type</dt>
+            <dd>Public portfolio project</dd>
+          </div>
+          <div>
+            <dt>Focus</dt>
+            <dd>Exploratory analysis</dd>
+          </div>
+          <div>
+            <dt>Tools</dt>
+            <dd>Python · pandas · Matplotlib · seaborn</dd>
+          </div>
+          <div>
+            <dt>Evidence</dt>
+            <dd>Source code</dd>
+          </div>
+        </dl>
+        <div class="case-layout">
+          <nav class="case-toc" aria-label="Case study sections">
+            <a href="#question">01 / Question</a
+            ><a href="#approach">02 / Approach</a
+            ><a href="#contribution">03 / Contribution</a
+            ><a href="#outcome">04 / Outcome & evidence</a>
+          </nav>
+          <div class="case-content">
+            <section id="question">
+              <h2>The question.</h2>
+              <p style="color: var(--text); font-size: 22px">
+                How can raw Airbnb listing data be prepared and explored so that
+                comparisons are easier to interpret?
+              </p>
+              <p>
+                The script works with Airbnb_Open_Data.csv, including listing
+                prices, room types, neighbourhoods, cancellation policies, fees,
+                and reviews. It explores how these attributes vary across the
+                available listings.
+              </p>
+            </section>
+            <section id="approach">
+              <h2>The approach.</h2>
+              <ul>
+                <li>
+                  Standardise column names, remove duplicate rows, handle
+                  missing values, and convert price and service-fee fields to
+                  numbers.
+                </li>
+                <li>
+                  Compare room types and cancellation policies, calculate
+                  average prices by neighbourhood, and inspect price
+                  distributions with bar charts and box plots.
+                </li>
+                <li>
+                  Explore price–fee relationships and review distributions with
+                  pandas, Matplotlib, and seaborn. Export a cleaned CSV for
+                  further visual analysis in Tableau.
+                </li>
+              </ul>
+            </section>
+            <section id="contribution">
+              <h2>The contribution.</h2>
+              <p>
+                The combined script connects data preparation, exploratory
+                comparisons, visualisation, and a CSV export in one workflow.
+                Its source makes the imputation choices, filters, and
+                calculations available for inspection.
+              </p>
+            </section>
+            <section id="outcome">
+              <h2>What the work shows.</h2>
+              <p>
+                The script produces comparison tables, charts, and a cleaned
+                export when run with the source data. These outputs support
+                exploration of listing prices and characteristics. Quantitative
+                findings are not reproduced here because the dataset has not
+                been rerun for this case study.
+              </p>
+              <p>
+                Before extending the analysis, I would document dataset
+                coverage, test sensitivity to imputation and outlier thresholds,
+                and validate the availability and year fields. Availability is
+                not equivalent to bookings, and review dates alone cannot
+                establish annual listing supply.
+              </p>
+              <div class="evidence-box" style="margin-top: 28px">
+                <div class="mono">Inspect the original work</div>
+                <p>Read the source for the full detail and context.</p>
+                <div class="case-actions">
+                  <a
+                    href="https://github.com/vishalmaheshwariwrk-cmd/PortfolioProjects/blob/main/AirBnB_DataAnalysis_combinedtaskscode.py"
+                    class="button primary"
+                    >View Python source ↗</a
+                  >
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div class="related">
+          <a href="projects.html" class="">← Back to all work</a
+          ><a href="case-study-housing.html" class="">Next case study ↗</a>
+        </div>
+      </div>
+    </main>
+    <section class="contact shell" id="contact" aria-labelledby="contact-title">
+      <div class="eyebrow">06 / Let’s connect</div>
+      <h2 id="contact-title">
+        Have a measurement<br />problem <em>worth<br />investigating?</em>
+      </h2>
+      <div class="contact-bottom">
+        <a href="mailto:vishalmaheshwariwrk@gmail.com" class="email-link"
+          >vishalmaheshwariwrk@gmail.com ↗</a
+        >
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/vishalmaheshwari16011/" class=""
+            >LinkedIn ↗</a
+          ><a href="https://github.com/vishalmaheshwariwrk-cmd" class=""
+            >GitHub ↗</a
+          ><a
+            href="https://scholar.google.com/citations?user=9Gz8YGcAAAAJ&amp;hl=en&amp;oi=ao"
+            class=""
+            >Google Scholar ↗</a
+          >
+        </div>
+      </div>
+      <footer class="footer">
+        <span>© 2026 Vishal Maheshwari</span
+        ><span class="mono">Built with curiosity. Grounded in evidence.</span
+        ><a href="#main">Back to top ↑</a>
+      </footer>
+    </section>
+  </body>
+</html>
