@@ -29,7 +29,7 @@ Open **http://127.0.0.1:4173**. The server binds only to the local computer. You
 | `resume.html`                   | Clearly labelled résumé draft with Print / Save as PDF layout             |
 | `assets/css/signal.css`         | Shared styles, responsive breakpoints, print styles                       |
 | `assets/js/signal.js`           | Menu, motion control, scroll progress, filters, print action              |
-| `assets/js/signal-journey.js`   | Homepage canvas scene, cable camera, binary monitor and HELLO reveal      |
+| `assets/js/signal-world.js`     | WebGL particle world, perspective camera, bloom and binary HELLO reveal   |
 | `assets/css/signal-journey.css` | Scene placement, foreground readability and static fallbacks              |
 | `assets/fonts/`                 | Self-hosted Space Grotesk with OFL license                                |
 
@@ -52,7 +52,11 @@ The browser check uses installed Google Chrome on Windows. On other systems, ins
 
 External-link checks require internet access. A 403, timeout, or anti-bot response is **unverified**, not evidence that a link works or is broken.
 
-The homepage follows a signal through a cable into a monitor as visitors scroll. At Contact, zeros and ones assemble into HELLO. The original Canvas 2D scene uses projected 3D geometry, with no animation packages, models or external assets. Native scrolling and section links remain available. A fixed pause control stops time-based motion; scrolling while paused selects static compositions. Reduced-motion users see the original static signal diagram and a static contact terminal. The renderer stops when the tab is hidden and limits its frame rate and backing resolution.
+The homepage follows a signal through a cable into a monitor as visitors scroll. At Contact, zeros and ones assemble into HELLO. The scene is a real WebGL particle world: a woven cable, luminous fiber bundles, a circuit-board landscape, monitor, keyboard and PC tower. A perspective camera travels through the world; two blur passes add bloom around the particles. The geometry and shaders are original, with no external models or runtime packages. Floating content panels leave the scene visible around the copy.
+
+Native scrolling and section links remain available. A fixed pause control stops time-based motion; scrolling while paused selects static compositions. Reduced-motion users see the original static signal diagram and a static contact terminal. WebGL failure or context loss restores the static fallback; context restoration rebuilds the renderer. Rendering stops in hidden tabs, runs at approximately 30fps, and caps backing resolution. Mobile starts with fewer particles.
+
+For checks in the built-in browser, run `node tools/prepare-journey-review.mjs` and open `http://127.0.0.1:4173/journey-review.html`. This temporary audit reports axe violations, overflow, JavaScript errors and pause/resume scheduling. Use `?mode=no-webgl` or `?mode=context-loss` to exercise graphics fallbacks. The generated HTML is ignored by Git; remove it when finished. The conventional Playwright runner remains available for optional command-line QA.
 
 `check:journey` captures normal-motion hero, transit, monitor and contact scenes at desktop/mobile sizes. It checks reverse scrolling, direct Contact links, resizing, pixel stability while paused, resume behavior and reduced-motion fallbacks. Screenshots are saved to `artifacts/journey/` separately from the general check's reduced-motion screenshots.
 

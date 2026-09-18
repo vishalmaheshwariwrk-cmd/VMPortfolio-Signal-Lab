@@ -18,6 +18,10 @@ for (const width of [390, 1440]) {
   await page.goto("http://127.0.0.1:4173/");
   await page.evaluate(() => document.fonts.ready);
   await page.waitForSelector(".journey-ready");
+  await expect(page.locator("#signal-canvas")).toHaveAttribute(
+    "data-renderer",
+    "webgl",
+  );
   await page.waitForTimeout(300);
   for (const stage of ["hero", "process", "about", "contact"]) {
     await page.evaluate((stage) => {
@@ -52,21 +56,18 @@ for (const width of [390, 1440]) {
   }
   await page.locator(".motion-toggle").click();
   await page.waitForTimeout(150);
-  const first = await page
-    .locator("#signal-canvas")
-    .evaluate((el) => el.toDataURL());
+  // Capture the compositor: WebGL discards the buffer used by toDataURL.
+  const capture = () =>
+    page.locator("#signal-canvas").screenshot({
+      style: "body > :not(.signal-journey) { visibility: hidden !important; }",
+    });
+  const first = await capture();
   await page.waitForTimeout(250);
-  const second = await page
-    .locator("#signal-canvas")
-    .evaluate((el) => el.toDataURL());
-  assert.equal(first, second, "Pause freezes rendered pixels");
+  const second = await capture();
+  assert.ok(first.equals(second), "Pause freezes rendered pixels");
   await page.locator(".motion-toggle").click();
   await page.waitForTimeout(200);
-  assert.notEqual(
-    second,
-    await page.locator("#signal-canvas").evaluate((el) => el.toDataURL()),
-    "Play resumes rendering",
-  );
+  assert.ok(!second.equals(await capture()), "Play resumes rendering");
   await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
   await page.waitForTimeout(1000);
   assert.equal(

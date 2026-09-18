@@ -20,7 +20,19 @@ The legacy `VMPortfolio.github.io` repository was restored with revert commit `7
 - Local font, favicon, and original PNG social preview. No external runtime requests, forms, or production package dependencies.
 - Former demo URLs now lead visitors back into the portfolio. Unused template assets and licenses remain preserved.
 
-## Signal journey — 18 September 2026
+## Current revision: WebGL particle world — 18 September 2026
+
+Vishal rejected the first Canvas 2D cable illustration as visually unlike Remix, and approved floating content panels for a closer match. The renderer has been rebuilt as a genuine WebGL point cloud with a perspective camera, woven cable, luminous internal fibers, circuit-board ground, monitor, keyboard and PC tower. The camera travels along the cable, orbits the computer and ends on binary HELLO. Two blur passes provide bloom. The original 2D renderer has been removed.
+
+Content now sits in compact floating panels with space for the scene to remain visible. Native scrolling, ordinary links, pause, reduced-motion styles and static fallback content are retained. WebGL creation failure and context loss reveal the static fallback; context restoration rebuilds GPU resources. The final camera shot fades foreground coils so they do not cover the greeting.
+
+**Current validation:** In the built-in browser, axe reported no violations at 1280, 390 and 320px; there was no horizontal overflow or JavaScript error at those widths. Instrumented pause checks confirmed that frame callbacks stop and resume. Simulated WebGL failure, context loss and restoration all passed. Desktop hero/process/contact and mobile contact were visually inspected. JavaScript syntax and Git whitespace checks passed. The earlier Lighthouse score below belongs to the superseded 2D version; it has not been rerun for WebGL.
+
+Vishal explicitly requested using the built-in browser and stopping Chrome-skill browsing. All browser work after that correction used the built-in browser. `tools/prepare-journey-review.mjs` creates a temporary, ignored audit page for that workflow. The CLI animation check was adapted to capture composited WebGL screenshots rather than cleared `toDataURL()` buffers; it was not rerun in an external browser during this revision.
+
+This revision is local. The previous automatic approval rejection still blocks GitHub upload because of account usage limits. No alternate upload route was attempted. Use only `signal-lab` for the eventual upload; production deployment remains pending approval.
+
+## Previous Canvas 2D journey — 18 September 2026
 
 Vishal requested a Remix-inspired persistent background: a signal travelling through a wire, reaching a monitor with binary, and spelling HELLO at Contact. The homepage now has an original Canvas 2D scene with projected 3D cable geometry, travelling cyan/pink/lime packets, a scroll-driven camera, a monitor and binary characters that converge into HELLO. No Remix code or visual assets were copied.
 

@@ -24,10 +24,10 @@ body.journey-ready {
   inset: 0;
   background: linear-gradient(
     90deg,
-    #07090df5 0%,
-    #07090db0 35%,
-    #07090d18 69%,
-    #07090d00 100%
+    #07090d35 0%,
+    #07090d08 40%,
+    #07090d00 70%,
+    #07090d20 100%
   );
 }
 .journey-ready .hero-grid > div:first-child {
@@ -65,7 +65,7 @@ body.journey-ready {
   position: absolute;
   inset: 0 -24px;
   z-index: -1;
-  background: linear-gradient(90deg, #07090deb, #07090d94 68%, #07090d65);
+  background: none;
 }
 .journey-ready .project-card,
 .journey-ready .evidence-card {
@@ -247,5 +247,275 @@ body.journey-ready {
   }
   .journey-ready .terminal-fallback {
     visibility: visible;
+  }
+}
+
+/* Floating editorial panels leave the particle world visible around the story. */
+.signal-portfolio .site-header {
+  background: #07090dca;
+}
+.signal-portfolio .hero {
+  min-height: calc(100svh - 84px);
+  padding-top: 36px;
+}
+.signal-portfolio .hero-grid {
+  grid-template-columns: 1.12fr 1fr;
+  min-height: 52vh;
+  align-items: center;
+}
+.signal-portfolio .hero-grid > div:first-child {
+  text-shadow:
+    0 2px 24px #020508,
+    0 0 70px #020508;
+}
+.signal-portfolio .hero-actions {
+  max-width: 1000px;
+  margin: 60px auto 0;
+  background: #0a111bdd;
+  border: 1px solid #344457;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.signal-portfolio .hero-foot {
+  padding-bottom: 0;
+}
+.signal-portfolio .section.shell {
+  max-width: 880px;
+  width: calc(100% - 96px);
+  padding: 44px;
+  margin: 240px auto;
+  border: 1px solid #43536a80;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #101a29eb, #080f19ec);
+  box-shadow:
+    0 24px 100px #00000050,
+    inset 0 1px #b3d4ff0d;
+}
+.signal-portfolio .section h2 {
+  font-size: clamp(30px, 3.1vw, 46px);
+}
+.signal-portfolio .section-head {
+  gap: 26px;
+  align-items: end;
+}
+.signal-portfolio .section-head > .text-link {
+  flex-shrink: 0;
+}
+.signal-portfolio .work-grid {
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+.signal-portfolio .project-card {
+  background: #09121a9c;
+  border-color: #354455;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.signal-portfolio .project-card.featured {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.signal-portfolio .featured .project-art {
+  min-height: 280px;
+}
+.signal-portfolio .project-art {
+  background: #030b1370;
+}
+.signal-portfolio .project-card.compact {
+  grid-template-columns: 1fr 180px;
+}
+.signal-portfolio .compact .project-art {
+  min-height: 190px;
+}
+.signal-portfolio .project-card h3 {
+  font-size: 25px;
+}
+.signal-portfolio .process-heading {
+  grid-template-columns: 1fr;
+  gap: 22px;
+  margin-bottom: 32px;
+}
+.signal-portfolio .process-heading p {
+  max-width: 620px;
+}
+.signal-portfolio .pipeline {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px 36px;
+}
+.signal-portfolio .pipeline::before {
+  display: none;
+}
+.signal-portfolio .pipeline-step {
+  border-top: 1px solid #3a4b5f;
+  padding: 20px 0 0;
+}
+.signal-portfolio .pipeline-step h3 {
+  margin-top: 18px;
+}
+.signal-portfolio .pipeline-step p {
+  max-width: 270px;
+}
+.signal-portfolio .career-layout {
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+.signal-portfolio .career-intro {
+  max-width: 600px;
+  margin-bottom: 18px;
+}
+.signal-portfolio .capability {
+  grid-template-columns: 32px 1fr 1.9fr 20px;
+  gap: 14px;
+}
+.signal-portfolio .capability h3 {
+  font-size: 25px;
+}
+.signal-portfolio .evidence-grid {
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+.signal-portfolio .evidence-card {
+  background: transparent;
+  padding-top: 22px;
+}
+.signal-portfolio .evidence-card h3 br {
+  display: none;
+}
+.signal-portfolio .evidence-card p {
+  max-width: 600px;
+}
+.signal-portfolio .contact {
+  margin-top: 240px;
+}
+.signal-portfolio .contact h2 {
+  text-shadow: 0 2px 25px #03070d;
+}
+.signal-portfolio .contact-bottom {
+  padding: 28px;
+  margin: 40px 0 70px;
+  border: 1px solid #344457;
+  border-radius: 14px;
+  background: #0a111bea;
+}
+.signal-portfolio .contact-scene-row {
+  min-height: 500px;
+}
+.signal-portfolio .journey-destination {
+  aspect-ratio: 1.05;
+}
+@media (min-width: 1400px) {
+  .signal-portfolio #process,
+  .signal-portfolio #about {
+    margin-left: max(200px, calc((100vw - 1160px) / 2));
+  }
+  .signal-portfolio #capabilities,
+  .signal-portfolio #evidence {
+    margin-right: max(200px, calc((100vw - 1160px) / 2));
+  }
+}
+@media (max-width: 1000px) {
+  .signal-portfolio .contact-scene-row {
+    min-height: auto;
+  }
+  .signal-portfolio .journey-destination {
+    max-width: 680px;
+    aspect-ratio: 1.15;
+  }
+}
+@media (max-width: 760px) {
+  .signal-portfolio .hero {
+    padding-top: 28px;
+  }
+  .signal-portfolio .hero-grid {
+    display: block;
+    min-height: 0;
+  }
+  .signal-portfolio .hero-grid > div:first-child {
+    background: none;
+  }
+  .signal-portfolio .signal-visual {
+    margin: 30px 0 0;
+    aspect-ratio: 1.3;
+  }
+  .signal-portfolio .hero-actions {
+    margin-top: 24px;
+  }
+  .signal-portfolio .hero-foot {
+    line-height: 1.7;
+  }
+  .signal-portfolio .section.shell {
+    width: calc(100% - 32px);
+    padding: 26px 22px;
+    margin: 170px auto;
+    border-radius: 18px;
+  }
+  .signal-portfolio .section::before {
+    background: none;
+  }
+  .signal-portfolio .section-head {
+    display: block;
+  }
+  .signal-portfolio .section-head > .text-link {
+    margin-top: 22px;
+  }
+  .signal-portfolio .project-card.featured {
+    display: flex;
+  }
+  .signal-portfolio .featured .project-art {
+    min-height: 210px;
+  }
+  .signal-portfolio .project-card.compact {
+    grid-template-columns: 1fr;
+  }
+  .signal-portfolio .compact .project-art {
+    display: none;
+  }
+  .signal-portfolio .compact .project-body {
+    padding: 22px;
+  }
+  .signal-portfolio .pipeline {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .signal-portfolio .pipeline-step {
+    display: grid;
+    grid-template-columns: 34px 1fr;
+    gap: 10px 16px;
+  }
+  .signal-portfolio .pipeline-step h3 {
+    margin: 0;
+    align-self: center;
+  }
+  .signal-portfolio .pipeline-step p {
+    grid-column: 2;
+  }
+  .signal-portfolio .capability {
+    grid-template-columns: 22px 1fr 20px;
+    gap: 12px;
+  }
+  .signal-portfolio .capability p {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .signal-portfolio .capability .plus {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .signal-portfolio .contact {
+    margin-top: 150px;
+  }
+  .signal-portfolio .contact-bottom {
+    padding: 22px 16px;
+  }
+  .signal-portfolio .email-link {
+    font-size: clamp(11px, 3.3vw, 16px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .signal-portfolio .section.shell {
+    margin-block: 90px;
+  }
+  .signal-portfolio .journey-destination {
+    max-height: 420px;
   }
 }
