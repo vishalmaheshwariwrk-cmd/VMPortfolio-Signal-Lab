@@ -1,4 +1,4 @@
-# Local review — 17 September 2026
+# Local review — 18 September 2026
 
 **Preview:** http://127.0.0.1:4173
 
@@ -19,6 +19,22 @@ The legacy `VMPortfolio.github.io` repository was restored with revert commit `7
 - Shared responsive navigation, visible keyboard focus, skip link, scroll progress, animation pause, reduced-motion behavior, and a usable no-JavaScript fallback.
 - Local font, favicon, and original PNG social preview. No external runtime requests, forms, or production package dependencies.
 - Former demo URLs now lead visitors back into the portfolio. Unused template assets and licenses remain preserved.
+
+## Signal journey — 18 September 2026
+
+Vishal requested a Remix-inspired persistent background: a signal travelling through a wire, reaching a monitor with binary, and spelling HELLO at Contact. The homepage now has an original Canvas 2D scene with projected 3D cable geometry, travelling cyan/pink/lime packets, a scroll-driven camera, a monitor and binary characters that converge into HELLO. No Remix code or visual assets were copied.
+
+The contact layout gives the terminal its own space beside the heading on desktop and below it on mobile. Native page scrolling and anchor links remain available. Pause freezes time-based animation while subsequent scrolling selects static compositions. Reduced-motion and no-JavaScript views keep a static signal diagram and contact terminal. The canvas is decorative, does not intercept clicks, and stops rendering in hidden tabs. Rendering is capped at approximately 30fps with bounded canvas resolution.
+
+Validation for this change:
+
+- `npm run check`: all 10 pages, 40 local destinations, six responsive widths, axe, navigation, filters, print and no-JavaScript checks passed.
+- `npm run check:journey`: desktop/mobile scene stages, reverse scroll, direct Contact links, resizing, pixel-stable pause, resume and reduced motion passed. Normal-motion screenshots in `artifacts/journey/` were visually inspected.
+- A separate read-only technical review found no blocking issue; its frame-rate finding was corrected.
+- Lighthouse mobile: 100 performance, 100 accessibility, 100 best practices, 100 SEO. These are local lab scores, not field measurements.
+- A roughly 4.5-second mobile-viewport scroll sample recorded no main-thread tasks over 50ms on this computer; slower physical devices still need real-device review.
+
+Source uploads use the new `signal-lab` repository; production deployment remains pending approval.
 
 ## Validation
 

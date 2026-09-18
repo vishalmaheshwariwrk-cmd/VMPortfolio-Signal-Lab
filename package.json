@@ -5,7 +5,8 @@
   "description": "A static portfolio. Node dependencies are local quality-assurance tools only.",
   "scripts": {
     "preview": "node tools/preview.mjs",
-    "check": "node tools/check.mjs"
+    "check": "node tools/check.mjs",
+    "check:journey": "node tools/check-journey.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.55.0",

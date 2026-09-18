@@ -39,6 +39,9 @@ function setMotion(paused) {
       : "Pause signal motion Ⅱ";
     motionButton.setAttribute("aria-pressed", String(paused));
   }
+  document.dispatchEvent(
+    new CustomEvent("signal-motion", { detail: { paused } }),
+  );
 }
 setMotion(motionPaused);
 motionButton?.addEventListener("click", () => setMotion(!motionPaused));

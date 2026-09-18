@@ -29,9 +29,15 @@
       crossorigin
     />
     <link rel="stylesheet" href="assets/css/signal.css" />
+    <link rel="stylesheet" href="assets/css/signal-journey.css" />
     <script src="assets/js/signal.js" defer></script>
+    <script src="assets/js/signal-journey.js" defer></script>
   </head>
   <body>
+    <div class="signal-journey" aria-hidden="true">
+      <canvas id="signal-canvas"></canvas>
+      <div class="journey-shade"></div>
+    </div>
     <a class="skip" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="shell nav-wrap">
@@ -88,6 +94,10 @@
           </div>
           <div>
             <div class="signal-visual">
+              <div class="journey-intro mono" aria-hidden="true">
+                <span>01 / TRANSMIT</span>
+                <span>FOLLOW THE SIGNAL ↓</span>
+              </div>
               <div class="figure-label mono">
                 FIG. 01 — FROM NOISE TO SIGNAL
               </div>
@@ -987,9 +997,24 @@
     </main>
     <section class="contact shell" id="contact" aria-labelledby="contact-title">
       <div class="eyebrow">06 / Let’s connect</div>
-      <h2 id="contact-title">
-        Have a measurement<br />problem <em>worth<br />investigating?</em>
-      </h2>
+      <div class="contact-scene-row">
+        <h2 id="contact-title">
+          Have a measurement<br />problem <em>worth<br />investigating?</em>
+        </h2>
+        <div
+          class="journey-destination"
+          role="img"
+          aria-label="The signal arrives at a computer screen, where zeros and ones form the word HELLO."
+        >
+          <div class="terminal-fallback" aria-hidden="true">
+            <span class="mono">SIGNAL RECEIVED</span>
+            <strong>HELLO<span>_</span></strong>
+            <small class="mono"
+              >01001000 01000101 01001100 01001100 01001111</small
+            >
+          </div>
+        </div>
+      </div>
       <div class="contact-bottom">
         <a href="mailto:vishalmaheshwariwrk@gmail.com" class="email-link"
           >vishalmaheshwariwrk@gmail.com ↗</a
@@ -1012,5 +1037,10 @@
         ><a href="#main">Back to top ↑</a>
       </footer>
     </section>
+    <div class="journey-caption mono" aria-hidden="true">
+      <span class="journey-light"></span
+      ><span data-journey-label>01 / TRANSMIT</span>
+      <span class="journey-track"><span></span></span>
+    </div>
   </body>
 </html>

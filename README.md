@@ -17,19 +17,21 @@ Open **http://127.0.0.1:4173**. The server binds only to the local computer. You
 
 ## Files to edit
 
-| File                       | Purpose                                                                   |
-| -------------------------- | ------------------------------------------------------------------------- |
-| `index.html`               | Homepage, selected work, process, capabilities, career, evidence, contact |
-| `projects.html`            | Eight public projects with category filters                               |
-| `case-study-airbnb.html`   | Airbnb exploratory analysis                                               |
-| `case-study-housing.html`  | Nashville housing SQL cleaning                                            |
-| `case-study-research.html` | Startup-valuation publication                                             |
-| `research.html`            | Two publications with original source links                               |
-| `certificates.html`        | Six credentials with dates and evidence links                             |
-| `resume.html`              | Clearly labelled résumé draft with Print / Save as PDF layout             |
-| `assets/css/signal.css`    | Shared styles, responsive breakpoints, print styles                       |
-| `assets/js/signal.js`      | Menu, motion control, scroll progress, filters, print action              |
-| `assets/fonts/`            | Self-hosted Space Grotesk with OFL license                                |
+| File                            | Purpose                                                                   |
+| ------------------------------- | ------------------------------------------------------------------------- |
+| `index.html`                    | Homepage, selected work, process, capabilities, career, evidence, contact |
+| `projects.html`                 | Eight public projects with category filters                               |
+| `case-study-airbnb.html`        | Airbnb exploratory analysis                                               |
+| `case-study-housing.html`       | Nashville housing SQL cleaning                                            |
+| `case-study-research.html`      | Startup-valuation publication                                             |
+| `research.html`                 | Two publications with original source links                               |
+| `certificates.html`             | Six credentials with dates and evidence links                             |
+| `resume.html`                   | Clearly labelled résumé draft with Print / Save as PDF layout             |
+| `assets/css/signal.css`         | Shared styles, responsive breakpoints, print styles                       |
+| `assets/js/signal.js`           | Menu, motion control, scroll progress, filters, print action              |
+| `assets/js/signal-journey.js`   | Homepage canvas scene, cable camera, binary monitor and HELLO reveal      |
+| `assets/css/signal-journey.css` | Scene placement, foreground readability and static fallbacks              |
+| `assets/fonts/`                 | Self-hosted Space Grotesk with OFL license                                |
 
 HTML files are the editable source; no build step is required. All active site assets use relative paths for GitHub Pages subpath compatibility. `generic.html` and `elements.html` preserve former template URLs with navigation to the redesigned site. Legacy template assets remain in the repository but no redesigned page loads them. Original HTML5 UP license files are retained.
 
@@ -41,6 +43,7 @@ Start the local preview, then:
 
 ```sh
 npm run check
+npm run check:journey
 node tools/check-links.mjs
 node tools/lighthouse.mjs
 ```
@@ -48,6 +51,10 @@ node tools/lighthouse.mjs
 The browser check uses installed Google Chrome on Windows. On other systems, install a Playwright Chromium browser (`npx playwright install chromium`) or set `CHROME_PATH` to an installed executable. It checks all HTML pages, local assets and anchors, six screen widths, accessibility with axe, mobile navigation, keyboard focus, project filters, reduced motion, no-JavaScript access, and résumé print layout. Results and screenshots are written to the ignored `artifacts/` directory. The social-preview PNG is generated from the original SVG during this check.
 
 External-link checks require internet access. A 403, timeout, or anti-bot response is **unverified**, not evidence that a link works or is broken.
+
+The homepage follows a signal through a cable into a monitor as visitors scroll. At Contact, zeros and ones assemble into HELLO. The original Canvas 2D scene uses projected 3D geometry, with no animation packages, models or external assets. Native scrolling and section links remain available. A fixed pause control stops time-based motion; scrolling while paused selects static compositions. Reduced-motion users see the original static signal diagram and a static contact terminal. The renderer stops when the tab is hidden and limits its frame rate and backing resolution.
+
+`check:journey` captures normal-motion hero, transit, monitor and contact scenes at desktop/mobile sizes. It checks reverse scrolling, direct Contact links, resizing, pixel stability while paused, resume behavior and reduced-motion fallbacks. Screenshots are saved to `artifacts/journey/` separately from the general check's reduced-motion screenshots.
 
 The Lighthouse helper starts an isolated headless Chrome instance on local debugging port 9337 and closes it afterwards. It avoids a Windows temporary-profile cleanup issue in the Lighthouse CLI.
 
