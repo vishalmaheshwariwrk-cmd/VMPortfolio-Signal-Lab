@@ -4,9 +4,11 @@
 
 **Résumé draft:** http://127.0.0.1:4173/resume.html
 
-**Repository:** `vishalmaheshwariwrk-cmd/VMPortfolio.github.io`
+**Repository:** [vishalmaheshwariwrk-cmd/VMPortfolio-Signal-Lab](https://github.com/vishalmaheshwariwrk-cmd/VMPortfolio-Signal-Lab)
 
-**Local branch:** `codex/signal-lab-local`, based on `5ad19cf`. Changes remain local and uncommitted. No push, merge, deployment, or production configuration change was made.
+**Upload status — 18 September 2026:** Redesign commit `c74823d` was pushed to the new repository's `main` branch. Local branch `codex/signal-lab-local` tracks `signal-lab/main`. Website deployment remains pending review; this upload did not configure GitHub Pages.
+
+The legacy `VMPortfolio.github.io` repository was restored with revert commit `770a75a`, whose content matches baseline `5ad19cf`. Use `signal-lab` as the remote for future redesign uploads.
 
 ## Built
 

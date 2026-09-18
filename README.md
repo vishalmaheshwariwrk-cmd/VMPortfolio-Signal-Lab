@@ -1,6 +1,8 @@
 # The Signal Lab — Vishal Maheshwari
 
-A static portfolio built with semantic HTML, custom CSS, and vanilla JavaScript. The redesigned site is for local review. It has not been pushed or deployed.
+A static portfolio built with semantic HTML, custom CSS, and vanilla JavaScript. Source code is uploaded to [VMPortfolio-Signal-Lab](https://github.com/vishalmaheshwariwrk-cmd/VMPortfolio-Signal-Lab) on `main`. Website deployment remains pending review.
+
+This checkout uses the `signal-lab` remote for the redesign. Upload changes with `git push signal-lab HEAD:main`. The `origin` remote points to the restored legacy portfolio and is not the upload destination for this project.
 
 ## Local preview
 
