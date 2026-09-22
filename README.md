@@ -1,8 +1,8 @@
 # The Signal Lab — Vishal Maheshwari
 
-A static portfolio built with semantic HTML, custom CSS, and vanilla JavaScript. Source code is uploaded to [VMPortfolio-Signal-Lab](https://github.com/vishalmaheshwariwrk-cmd/VMPortfolio-Signal-Lab) on `main`. Website deployment remains pending review.
+A static portfolio built with semantic HTML, custom CSS, and vanilla JavaScript. Source code lives in [VMPortfolio-Signal-Lab](https://github.com/vishalmaheshwariwrk-cmd/VMPortfolio-Signal-Lab) on `main` and is published with GitHub Pages at [vishalmaheshwariwrk-cmd.github.io/VMPortfolio-Signal-Lab](https://vishalmaheshwariwrk-cmd.github.io/VMPortfolio-Signal-Lab/).
 
-This checkout uses the `signal-lab` remote for the redesign. Upload changes with `git push signal-lab HEAD:main`. The `origin` remote points to the restored legacy portfolio and is not the upload destination for this project.
+This checkout uses `origin` for the Signal Lab repository. Upload reviewed changes with `git push origin main`.
 
 ## Local preview
 
@@ -24,9 +24,9 @@ Open **http://127.0.0.1:4173**. The server binds only to the local computer. You
 | `case-study-airbnb.html`        | Airbnb exploratory analysis                                               |
 | `case-study-housing.html`       | Nashville housing SQL cleaning                                            |
 | `case-study-research.html`      | Startup-valuation publication                                             |
-| `research.html`                 | Two publications with original source links                               |
+| `research.html`                 | Three publications with original source links                             |
 | `certificates.html`             | Six credentials with dates and evidence links                             |
-| `resume.html`                   | Clearly labelled résumé draft with Print / Save as PDF layout             |
+| `resume.html`                   | Source-checked career profile with Print / Save as PDF layout             |
 | `assets/css/signal.css`         | Shared styles, responsive breakpoints, print styles                       |
 | `assets/js/signal.js`           | Menu, motion control, scroll progress, filters, print action              |
 | `assets/js/signal-world.js`     | WebGL particle world, perspective camera, bloom and binary HELLO reveal   |
@@ -64,16 +64,16 @@ The Lighthouse helper starts an isolated headless Chrome instance on local debug
 
 Latest review: see [LOCAL-REVIEW.md](LOCAL-REVIEW.md).
 
-## Content review before release
+## Content review notes
 
-- Review the résumé draft and replace it with an official résumé if desired.
+- The source-checked résumé page can be replaced with an official résumé if desired.
 - Claude’s editorial review described in Knotpad remains pending; Codex’s independent technical review does not replace it.
 - Confirm current career dates and approved case-study wording with Vishal.
 - Professional MMM work is represented as a capability only, with no client case study or invented results.
 - Google Analytics certification is shown as historical, expired July 2026 according to the source portfolio.
 - Google Ads credentials lacking evidence and applied-research entries with conflicting dates are held out of this version. Existing source history remains available in Git.
 - Review external destinations that automated checks cannot verify.
-- Finalise canonical and absolute social-preview URLs when the production URL is approved.
-- Deploy only after Vishal explicitly approves release. No deployment workflow has been added.
+- The homepage canonical URL and social-preview URL target the GitHub Pages deployment.
+- Vishal approved making the repository public and publishing it with GitHub Pages on 22 September 2026.
 
 Planning and handoff: Knotpad’s **Portfolio Redesign Plan** and **Portfolio Execution Plan — Claude + Codex**. Baseline commit: `5ad19cf`; working branch: `codex/signal-lab-local`.
